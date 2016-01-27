@@ -1,0 +1,22 @@
+{
+  "name": "digits",
+  "description": "Digit handwriting recognition with Angular2 and TensorFlow on AppEngine.",
+  "main": "",
+  "authors": [
+    "Ryan Knapp <rknapp@google.com>"
+  ],
+  "license": "Apache 2.0",
+  "homepage": "https://github.com/rpk/digits",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "signature_pad": "^1.5.2"
+  }
+}

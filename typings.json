@@ -1,0 +1,5 @@
+{
+  "ambientDependencies": {
+    "signature_pad": "github:DefinitelyTyped/DefinitelyTyped/signature_pad/signature_pad.d.ts#0c2d2f07a7e171483479e882bf88639f2ca07595"
+  }
+}
