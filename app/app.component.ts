@@ -10,7 +10,7 @@ export interface SignatureData {
     selector: 'my-app',
     template: `
     <h1>{{title}}</h1>
-    <canvas id="pad"></canvas>
+    <canvas id="pad" ></canvas>
     <div>
         <label>Drawn By: </label>
         <div><input [(ngModel)]="signature.creator" placeholder="name"></div>
@@ -18,16 +18,16 @@ export interface SignatureData {
     `
 })
 export class AppComponent {
-    public title = "Digit Recognition"
+    public title = "Digit Recognition";
     public signature: SignatureData = {
         id: 1,
         image: "",
         creator: ""
-    }
+    };
 
-    var canvas = document.querySelector("canvas");
+    canvas : Element = document.querySelector("#pad");
 
-    var signaturePad = new SignaturePad(canvas);
+    signaturePad : SignaturePad = new SignaturePad(this.canvas);
 
 }
 

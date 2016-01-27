@@ -9,7 +9,7 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent, canvas, signaturePad;
+    var AppComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -24,19 +24,19 @@ System.register(['angular2/core'], function(exports_1) {
                         image: "",
                         creator: ""
                     };
+                    this.canvas = document.querySelector("#pad");
+                    this.signaturePad = new SignaturePad(this.canvas);
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n    <h1>{{title}}</h1>\n    <canvas id=\"pad\"></canvas>\n    <div>\n        <label>Drawn By: </label>\n        <div><input [(ngModel)]=\"signature.creator\" placeholder=\"name\"></div>\n    </div>\n    "
+                        template: "\n    <h1>{{title}}</h1>\n    <canvas id=\"pad\" ></canvas>\n    <div>\n        <label>Drawn By: </label>\n        <div><input [(ngModel)]=\"signature.creator\" placeholder=\"name\"></div>\n    </div>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
                 return AppComponent;
             })();
             exports_1("AppComponent", AppComponent);
-            canvas = document.querySelector("canvas");
-            signaturePad = new SignaturePad(canvas);
         }
     }
 });
